@@ -1,5 +1,9 @@
-#include <iostream>
+/*
+ * Compile for now with
+ * g++ -o getsome main.cpp autotoolerpp.cpp  -I../include
+ */
 
+#include <iostream>
 #include "autotoolerpp.h"
 
 int
