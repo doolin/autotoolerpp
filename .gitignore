@@ -6,3 +6,4 @@ config.h.in
 depcomp
 missing
 install-sh
+Makefile.in
