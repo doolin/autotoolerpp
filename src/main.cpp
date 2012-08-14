@@ -6,6 +6,9 @@
 #include <iostream>
 #include "autotoolerpp.h"
 
+// http://www.embedded-bits.co.uk/2009/gcc-compiler-warnings/
+// https://github.com/ndim/freemcan/blob/f6348add31479b17ad7c7eec0acaf1f100843e84/include/compiler.h#L44
+
 /** Rename Unused Parameter */
 #define _UP(x) unused_p__ ## x
 
