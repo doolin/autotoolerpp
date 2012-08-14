@@ -1,4 +1,6 @@
 Makefile
+*.a
+*.o
 .deps
 *~
 getsome
