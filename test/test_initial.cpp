@@ -1,11 +1,12 @@
 #include <string>
 
-//#include <cppunit/Portability.h>
-//#include <cppunit/portability/CppUnitSet.h>
-//#include <cppunit/extensions/TestFactory.h>
 #include <cppunit/TestCase.h>
 
 #include "testutils.h"
+
+#include <autotoolerpp.h>
+
+using std::string;
 
 class Initial {
 public:
@@ -13,21 +14,38 @@ public:
   int value;
 };
 
+
 class InitialTest : public CppUnit::TestCase {
 
 public:
   InitialTest( std::string name ) : CppUnit::TestCase( name ) {}
 
+
+  void test_getsome() {
+
+    Spec spec;
+    spec.it("Testing getsome", DO_SPEC {
+      return (string("some") == get_some());
+    });
+  }
+
   void runTest() {
-    Initial * i = new Initial();
-    CPPUNIT_ASSERT( i->value  == 1 );
+    test_getsome();
   }
 };
+
+void
+test_initial() {
+
+  InitialTest * it = new InitialTest(std::string("initial test"));
+  it->runTest();
+  delete it;
+}
+
 
 int
 main(int argc, char ** argv) {
 
-  InitialTest * it = new InitialTest(std::string("initial test"));
-  it->runTest();
+  test_initial();
   return 0;
 }
