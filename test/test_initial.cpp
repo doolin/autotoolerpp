@@ -1,10 +1,11 @@
 #include <string>
 
-#include <cppunit/Portability.h>
-#include <cppunit/portability/CppUnitSet.h>
-#include <cppunit/extensions/TestFactory.h>
+//#include <cppunit/Portability.h>
+//#include <cppunit/portability/CppUnitSet.h>
+//#include <cppunit/extensions/TestFactory.h>
 #include <cppunit/TestCase.h>
 
+#include "testutils.h"
 
 class Initial {
 public:
