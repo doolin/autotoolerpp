@@ -1,5 +1,5 @@
-#ifndef PATENT_TESTUTILS_H
 #define PATENT_TESTUTILS_H
+#ifndef PATENT_TESTUTILS_H
 
 #include <algorithm>
 #include <functional>
@@ -38,6 +38,7 @@ public:
   void it (Description desc, std::function<bool(Description)> test) {
 
     Describer d;
+    // FIXME: not a secure technique, change to std::string
     sprintf(buf, desc);
     try {
       CPPUNIT_ASSERT(test(desc));
@@ -57,6 +58,5 @@ public:
 
 class TestUtils {
 };
-
 
 #endif // PATENT_TESTUTILS_H

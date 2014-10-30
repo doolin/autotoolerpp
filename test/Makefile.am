@@ -1,5 +1,5 @@
+AM_CPPFLAGS = -I../include -I./
 
-INCLUDES = -I../include -I./
 
 AM_CXXFLAGS = -std=c++11 -Wall -Wextra  -Wno-unused-parameter
 
