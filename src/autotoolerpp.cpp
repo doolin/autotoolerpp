@@ -1,4 +1,3 @@
-
 #include "autotoolerpp.h"
 
 std::string
