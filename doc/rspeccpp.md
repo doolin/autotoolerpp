@@ -52,7 +52,6 @@ We have:
 ### We can totally do that in c++!
 
 
- 
 # Spec in c++
 
 Like so:
@@ -72,12 +71,12 @@ Two observations:
 1. Not as pretty as Ruby spec;
 2. *way* prettier than your daddy's unit test.
 
-A third observation: not your daddy's c++ either.
+### A third observation: not your daddy's c++ either.
 
 
 # What just happened...?
 
-Welcome to c++ with lambdas. 
+Welcome to c++ with lambdas (&lambda;).
 
 Let's rewrite our spec without the DO macro:
 
