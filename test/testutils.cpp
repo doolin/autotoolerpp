@@ -10,13 +10,13 @@ using std::string;
 void
 describe(const char * indent, const char * description, const char * COLOR) {
 
-    std::cout << indent << COLOR << description << COLOR_RESET
+    std::cout << indent << COLOR << description << RESET_COLOR
               << std::endl;
 }
 
 void
-describe_test(const char * indent, const char * description) {
-  describe(indent, description, DESCCOLOR);
+describe_test(const char * indent, const std::string & description) {
+  describe(indent, description.c_str(), DESCCOLOR);
 }
 
 void

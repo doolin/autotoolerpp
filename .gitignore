@@ -1,3 +1,4 @@
+*.patch
 compile
 config.log
 config.status

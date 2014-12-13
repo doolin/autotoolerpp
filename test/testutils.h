@@ -1,10 +1,13 @@
-#ifndef IS_TESTUTILS_H
-#define IS_TESTUTILS_H
+//#define PATENT_TESTUTILS_H
+//#ifndef PATENT_TESTUTILS_H
 
 #include <algorithm>
 #include <functional>
+#include <string>
 
 #include <cppunit/TestCase.h>
+
+#include "colortest.h"
 
 #define DESCCOLOR COLOR45
 #define PASSCOLOR COLOR119
@@ -17,15 +20,16 @@
 #define INDENT6 "       "
 
 
-typedef const char * Description;
+typedef const std::string Description;
 typedef void (*Describer)(const char *, const char *);
 
-void describe_test(const char * indent, const char * description);
+void describe_test(const char * indent, const std::string & description);
 void describe_pass(const char * indent, const char * description);
 void describe_fail(const char * indent, const char * description);
 void describe_pending(const char * indent, const char * description);
 
-#define DO_SPEC [](Description d)->bool
+//#define DO_SPEC [](Description d)->bool
+#define DO_SPEC []()->bool
 #define DO_SPEC_THIS [this](Description d)->bool
 #define DO_SPEC_HANDLE [&](Description d)->bool
 
@@ -33,25 +37,24 @@ class Spec {
 
 public:
 
-  char buf[512];
-
-  void it (Description desc, std::function<bool(Description)> test) {
+  //void it (Description desc, std::function<bool(Description)> test) {
+  void it (Description desc, std::function<bool()> test) {
 
     Describer d;
-    // FIXME: not a secure technique, change to std::string
-    sprintf(buf, desc);
     try {
-      CPPUNIT_ASSERT(test(desc));
+      //CPPUNIT_ASSERT(test(desc));
+      CPPUNIT_ASSERT(test());
       d = describe_pass;
     } catch (CppUnit::Exception e) {
       d = describe_fail;
     }
-    d(INDENT4, buf);
+    d(INDENT2, desc.c_str());
   }
 
-  void xit (Description desc, std::function<bool(Description)> test) {
-
-    describe_pending(INDENT4, desc);
+  //void xit (Description desc, std::function<bool(Description)> test) {
+  /* Avoid unused parameter warning, don't care about legal c syntax, obviously. */
+  void xit (Description desc, std::function<bool()> /* test */) {
+    describe_pending(INDENT4, desc.c_str());
   }
 
 };
@@ -59,4 +62,4 @@ public:
 class TestUtils {
 };
 
-#endif // IS_TESTUTILS_H
+//#endif // PATENT_TESTUTILS_H
