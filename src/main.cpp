@@ -1,5 +1,4 @@
- * Compile for now with
-/*
+/* Compile for now with
  * g++ -o getsome main.cpp autotoolerpp.cpp  -I../include
  */
 

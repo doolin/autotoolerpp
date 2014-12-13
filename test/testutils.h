@@ -1,5 +1,5 @@
-#define PATENT_TESTUTILS_H
-#ifndef PATENT_TESTUTILS_H
+#ifndef IS_TESTUTILS_H
+#define IS_TESTUTILS_H
 
 #include <algorithm>
 #include <functional>
@@ -59,4 +59,4 @@ public:
 class TestUtils {
 };
 
-#endif // PATENT_TESTUTILS_H
+#endif // IS_TESTUTILS_H

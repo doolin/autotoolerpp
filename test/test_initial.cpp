@@ -1,10 +1,10 @@
 #include <string>
 
 #include <cppunit/TestCase.h>
-
-#include "testutils.h"
+#include "./testutils.h"
 
 #include <autotoolerpp.h>
+
 
 using std::string;
 
@@ -13,6 +13,7 @@ public:
   Initial(void) : value(1) {}
   int value;
 };
+
 
 
 class InitialTest : public CppUnit::TestCase {

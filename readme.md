@@ -2,7 +2,7 @@
 
 Template for a small c++ project built with GNU autotools.
 
-## Usage 
+## Usage
 
 This tiny project template has two main uses:
 
@@ -21,3 +21,6 @@ with script driver.
 ## TODO
 
 * Add in c++ spec
+  * port changes back from tfidf
+  * clean up the compiler warnings on unused params.
+  * create examples for every case, use disambiguator for examples.
