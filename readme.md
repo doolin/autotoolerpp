@@ -2,6 +2,10 @@
 
 Template for a small c++ project built with GNU autotools.
 
+TODO:
+
+- Fix ac_local for cppunit: `ls /opt/homebrew/share/aclocal-1.16/` Need to set the `AC_LOCAL_PATH` to here. The `cppunit.m4` macro is apparently not present on my current mbp.
+
 ## Usage
 
 This tiny project template has two main uses:
@@ -17,6 +21,23 @@ then remove the `.git` directory from the clone, then add
 the c++ directory to your main project. One use case for this
 is when implementing an algorithm in c++ (or c) for wrapping
 with script driver.
+
+## OSX
+
+- `brew install cppunit`
+- `brew install boost`
+
+The regular stuff:
+
+```
+libtoolize --force # doesn't work on macbook
+aclocal
+autoheader
+automake --force-missing --add-missing
+autoconf
+./configure
+```
+
 
 ## TODO
 

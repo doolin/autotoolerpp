@@ -5,7 +5,7 @@ AC_PREREQ([2.65])
 AC_INIT([autotoolerpp], [1.0], [david.doolin@gmail.com])
 AM_INIT_AUTOMAKE([foreign])
 AC_PROG_RANLIB
-AM_PATH_CPPUNIT(1.12.1)
+AM_PATH_CPPUNIT(1.15.1)
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([config.h])
 
